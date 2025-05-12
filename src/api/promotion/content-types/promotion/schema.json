@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "promotions",
+  "info": {
+    "singularName": "promotion",
+    "pluralName": "promotions",
+    "displayName": "Promotion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Caption": {
+      "type": "text"
+    },
+    "isFood": {
+      "type": "boolean",
+      "required": true
+    },
+    "isAlcohol": {
+      "type": "boolean",
+      "required": true
+    },
+    "TextAlignment": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ],
+      "required": true,
+      "default": "center"
+    },
+    "CategoryLink": {
+      "type": "string",
+      "required": true,
+      "default": "/products?category="
+    },
+    "LinkCaption": {
+      "type": "string",
+      "required": true
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::item-list.item-list"
+    },
+    "ImageUrl": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

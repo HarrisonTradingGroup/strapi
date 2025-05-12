@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collections",
+  "info": {
+    "singularName": "collection",
+    "pluralName": "collections",
+    "displayName": "Collection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "isBeverage": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isFood": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "CategoryLink": {
+      "type": "string",
+      "required": true
+    },
+    "parent": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::collection.collection",
+      "inversedBy": "collections"
+    },
+    "collections": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::collection.collection",
+      "mappedBy": "parent"
+    }
+  }
+}

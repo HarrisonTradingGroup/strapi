@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "item_lists",
+  "info": {
+    "singularName": "item-list",
+    "pluralName": "item-lists",
+    "displayName": "Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ItemName": {
+      "type": "string",
+      "required": true
+    },
+    "ItemPrice": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
