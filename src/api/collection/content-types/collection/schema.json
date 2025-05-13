@@ -40,6 +40,10 @@
       "relation": "manyToMany",
       "target": "api::collection.collection",
       "mappedBy": "parent"
+    },
+    "SortOrder": {
+      "type": "integer",
+      "default": 1
     }
   }
 }

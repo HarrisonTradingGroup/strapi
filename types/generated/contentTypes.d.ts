@@ -437,6 +437,7 @@ export interface ApiCollectionCollection extends Struct.CollectionTypeSchema {
       'api::collection.collection'
     >;
     publishedAt: Schema.Attribute.DateTime;
+    SortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<1>;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
