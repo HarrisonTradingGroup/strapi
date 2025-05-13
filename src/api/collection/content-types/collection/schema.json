@@ -44,6 +44,11 @@
     "SortOrder": {
       "type": "integer",
       "default": 1
+    },
+    "isPromotion": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

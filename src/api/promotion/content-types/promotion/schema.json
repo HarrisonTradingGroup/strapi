@@ -21,11 +21,13 @@
     },
     "isFood": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
     },
     "isAlcohol": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": false
     },
     "TextAlignment": {
       "type": "enumeration",
@@ -54,6 +56,10 @@
     "ImageUrl": {
       "type": "string",
       "required": true
+    },
+    "SortOrder": {
+      "type": "integer",
+      "default": 1
     }
   }
 }

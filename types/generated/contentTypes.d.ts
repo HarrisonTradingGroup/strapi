@@ -426,6 +426,9 @@ export interface ApiCollectionCollection extends Struct.CollectionTypeSchema {
     isFood: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
+    isPromotion: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -495,8 +498,12 @@ export interface ApiPromotionPromotion extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ImageUrl: Schema.Attribute.String & Schema.Attribute.Required;
-    isAlcohol: Schema.Attribute.Boolean & Schema.Attribute.Required;
-    isFood: Schema.Attribute.Boolean & Schema.Attribute.Required;
+    isAlcohol: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    isFood: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
     items: Schema.Attribute.Relation<'oneToMany', 'api::item-list.item-list'>;
     LinkCaption: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -506,6 +513,7 @@ export interface ApiPromotionPromotion extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    SortOrder: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<1>;
     TextAlignment: Schema.Attribute.Enumeration<['left', 'right', 'center']> &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'center'>;
