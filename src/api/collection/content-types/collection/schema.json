@@ -27,7 +27,7 @@
     },
     "CategoryLink": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "parent": {
       "type": "relation",

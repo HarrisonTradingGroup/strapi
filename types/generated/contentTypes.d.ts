@@ -412,7 +412,7 @@ export interface ApiCollectionCollection extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    CategoryLink: Schema.Attribute.String & Schema.Attribute.Required;
+    CategoryLink: Schema.Attribute.String;
     collections: Schema.Attribute.Relation<
       'manyToMany',
       'api::collection.collection'
